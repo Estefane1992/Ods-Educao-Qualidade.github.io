@@ -3,14 +3,18 @@
 body {
     margin: 0;
     padding: 0;
-    font-family:  'Lora', serif;
+    font-family: 'Lora', serif;
 }
-.navbar_background{
+
+.navbar_background {
     background-color: #88bba4;
 }
-.nav-link{
+
+.nav-link {
     color: #000;
 }
+
+/* Header */
 .header {
     height: 700px;
     display: flex;
@@ -40,27 +44,36 @@ body {
     font-size: 20px;
     font-weight: bolder;
 }
-.card_titulo{
+
+/* Cards */
+.container_cards {
+    background-color: #88bba4;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 40px;
+}
+
+.card_titulo {
     font-size: 40px;
     font-weight: bolder;
     text-transform: uppercase;
 }
-.container_cards{
-    background-color: #88bba4;
-   border-top-left-radius: 50px;
-   border-top-right-radius: 50px;
-   padding-bottom: 60px;
-}
-.card_background{
+
+.card_background {
     background-color: transparent !important;
-    border-radius: 30px;
-    padding: 10px;
-}
-.card_background p{
+    border-radius: 10px;
+    transition:  transform 0.2s ease, box-shadow 0.2s ease; 
     
-    font-size: 20px;
+}
+.card_background:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.902);
+    transform: scale(1.1);
 }
 
+.card_background p {
+    font-size: 20px;
+}
+/* Seção Video */
 .video-section {
     display: flex;
     justify-content: center;
@@ -71,16 +84,43 @@ body {
     background-position: center center;
     padding: 50px 0;
     height: 500px;
+    padding-top: 50px;
+    
 }
-.video{
+.video {
     width: 700px;
-     height: 400px;
+    height: 400px;
     padding-top: 30px;
 }
-footer{
+footer {
     background-color: #7fb4a084;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
+    .header {
+        height: 300px;
+        flex-direction: column;
+    }
+
+    .header_div {
+        max-width: 90%;
+        padding: 15px;
+        margin-top: 15px;
+    }
+
+    .header_div h1 {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    .header_div p {
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .video {
+        width: 370px;
+        height: 300px;
+        
+    }
     
 }
